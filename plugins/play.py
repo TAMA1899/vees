@@ -28,6 +28,10 @@ from pytgcalls import StreamType
 from pytgcalls.types.input_stream import InputAudioStream
 from pytgcalls.types.input_stream import InputStream
 
+import asyncio
+from helpers.fsub import handle_force_subscribe
+from pyrogram.errors import FloodWait, UserNotParticipant
+
 # plus
 chat_id = None
 DISABLED_GROUPS = []
@@ -107,6 +111,70 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     img.save("final.png")
     os.remove("temp.png")
     os.remove("background.png")
+    
+@Client.on_message(filters.command("playlist") & filters.group & ~filters.edited)
+async def playlist(client, message):
+    global que
+    if UPDATES_CHANNEL:
+      fsub = await handle_force_subscribe(client, message)
+      if fsub == 400:
+        return 
+    if message.chat.id in DISABLED_GROUPS:
+        return    
+    queue = que.get(message.chat.id)
+    if not queue:
+        await message.reply_text("__Tidak Ada Playlist__")
+    temp = []
+    for t in queue:
+        temp.append(t)
+    now_playing = temp[0][0]
+    by = temp[0][1].mention(style="md")
+    msg = "__Lagu Yang Sedang dimainkan__ di {}".format(message.chat.title)
+    msg += "\n\nJudul : " + now_playing
+    msg += "\nRequest Dari :" + by
+    temp.pop(0)
+    if temp:
+        msg += "\n────────────────────────────"
+        msg += "\n__Antrian Lagu :__"
+        for song in temp:
+            name = song[0]
+            usr = song[1].mention(style="md")
+            msg += f"\n\nJudul : {name}"
+            msg += f"\nRequest Dari : {usr}\n"
+    await message.reply_text(msg)
+    
+
+@Client.on_callback_query(filters.regex(pattern=r"^(playlist)$"))
+async def p_cb(b, cb):
+    global que
+    que.get(cb.message.chat.id)
+    type_ = cb.matches[0].group(1)
+    cb.message.chat.id
+    cb.message.chat
+    cb.message.reply_markup.inline_keyboard[1][0].callback_data
+    if type_ == "playlist":
+        queue = que.get(cb.message.chat.id)
+        if not queue:
+            await cb.message.edit("_Sedang tidak Memutar lagu__")
+        temp = []
+        for t in queue:
+            temp.append(t)
+        now_playing = temp[0][0]
+        by = temp[0][1].mention(style="md")
+        msg = "__Lagu Yang Sedang dimainkan__ di {}".format(cb.message.chat.title)
+        msg += "\n\nJudul : " + now_playing
+        msg += "\nRequest Dari" + by
+        temp.pop(0)
+        if temp:
+            msg += "\n────────────────────────────"
+            msg += "\n__Antrian Lagu__"
+            for song in temp:
+                name = song[0]
+                usr = song[1].mention(style="md")
+                msg += f"\n\nJudul : {name}"
+                msg += f"\nRequest Dari : {usr}\n"
+        await cb.message.edit(msg) 
+    
 
 
 @Client.on_message(
@@ -180,6 +248,10 @@ async def play(_, message: Message):
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return    
+    if UPDATES_CHANNEL:
+      fsub = await handle_force_subscribe(_, message)
+      if fsub == 400:
+        return
     lel = await message.reply("🔄 **Tunggu**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
