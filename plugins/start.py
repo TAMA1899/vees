@@ -37,7 +37,7 @@ Saya Alexa, Saya akan membantumu memutar music di Voice Chat Telegram Groups & C
 \n❗Ketik /help untuk melihat panduan pemakaiannya
 ❗Ketik /start untuk memuat ulang.
 \n───────────────────────────────────
-\n Semua orang pasti mati, tapi tidak semua orang dapat memberi arti. Pastikan hidupmu berarti/bermanfaat untuk orang lain
+\n__Semua orang pasti mati, tapi tidak semua orang dapat memberi arti. Pastikan hidupmu berarti/bermanfaat untuk orang lain__.
 \n───────────────────────────────────
 \n❃ Manage by :  [OWNER](https://t.me/pfffttt)  
 ❃ Support dengan doa aja guys! Thanks!
@@ -54,7 +54,7 @@ Saya Alexa, Saya akan membantumu memutar music di Voice Chat Telegram Groups & C
                 [
                     InlineKeyboardButton(
 
-                        "☕ ᴜᴘᴅᴀᴛᴇ", url=f"https://t.me/robotprojectx"), 
+                        "☕ ᴜᴘᴅᴀᴛᴇ", url=f"https://t.me/overthinkingid"), 
 
                     InlineKeyboardButton(
 
