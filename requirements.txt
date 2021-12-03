@@ -1,4 +1,5 @@
 git+https://github.com/pyrogram/pyrogram@master
+git+https://github.com/TAMA1899/yutup
 tgcrypto
 py-tgcalls
 python-dotenv
@@ -12,7 +13,6 @@ future
 psutil
 wget
 ffmpeg-python
-yt-dlp
 heroku3
 motor
 dnspython
