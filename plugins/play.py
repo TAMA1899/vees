@@ -187,7 +187,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "GeezProject"
+        user.first_name = "Alexa"
     usar = user
     wew = usar.id
     try:
@@ -267,7 +267,7 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/overthinkingid"),
+                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/robotprojectx"),
                     InlineKeyboardButton("ᴏᴡɴᴇʀ", url="https://t.me/ppfffttt"),
                 ],
                 [InlineKeyboardButton(text="❌", callback_data="cls")],
@@ -275,7 +275,7 @@ async def play(_, message: Message):
         )
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/f6086f8909fbfeb0844f2.png"
+        thumb_name = "https://telegra.ph/file/8ac47b3c81b8427f1979d.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -314,7 +314,7 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/overthinkingid"),
+                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/pejuangairdrops"),
                     InlineKeyboardButton("ᴏᴡɴᴇʀ", url="https://t.me/ppfffttt"),
                 ],
                 [InlineKeyboardButton(text="❌", callback_data="cls")],
@@ -393,7 +393,7 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/overthinkingid"),
+                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/pejuangairdrops"),
                     InlineKeyboardButton("ᴏᴡɴᴇʀ", url="https://t.me/ppfffttt"),
                 ],
                     [InlineKeyboardButton(text="❌", callback_data="cls")],
@@ -491,7 +491,7 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
             [
-                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/overthinkingid"),
+                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/pejuangairdrops"),
                     InlineKeyboardButton("ᴏᴡɴᴇʀ", url="https://t.me/ppfffttt"),
             ],
                     [InlineKeyboardButton("❌", callback_data="cls")],
