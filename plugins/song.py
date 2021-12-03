@@ -6,7 +6,7 @@ import yt_dlp
 from pyrogram import Client, filters
 from youtube_search import YoutubeSearch
 from helpers.errors import capture_err
-from config import BOT_USERNAME
+from config import BOT_USERNAME, UPDATES_CHANNEL
 
 import asyncio
 from helpers.fsub import handle_force_subscribe
