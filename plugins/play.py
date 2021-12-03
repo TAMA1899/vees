@@ -10,7 +10,7 @@ from Client.callsmusic import client as USER
 from helpers.admins import get_administrators
 import requests
 import aiohttp
-import yt_dlp
+import yutup
 from youtube_search import YoutubeSearch
 import converter
 from youtube import youtube
