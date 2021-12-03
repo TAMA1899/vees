@@ -32,14 +32,14 @@ async def _human_time_duration(seconds):
 @Client.on_message(other_filters2)
 async def start(_, message: Message):
         await message.reply_text(
-        f"""<b>Hello Friend, {message.from_user.first_name} 👏
+        f"""<b>Halo {message.from_user.first_name} 👏
 Saya Alexa, Saya akan membantumu memutar music di Voice Chat Telegram Groups & Channel, dengan fitur-fitur yang menarik.
 \n❗Ketik /help untuk melihat panduan pemakaiannya
 ❗Ketik /start untuk memuat ulang.
 \n───────────────────────────────────
 \n__Semua orang pasti mati, tapi tidak semua orang dapat memberi arti. Pastikan hidupmu berarti/bermanfaat untuk orang lain__.
 \n───────────────────────────────────
-\n❃ Manage by :  [OWNER](https://t.me/pfffttt)  
+\n❃ Manage by :  [OWNER](https://t.me/ppfffttt)  
 ❃ Support dengan doa aja guys! Thanks!
 ❃ NB : Maaf jika ada kekurangan didalam bot ini
 </b>
