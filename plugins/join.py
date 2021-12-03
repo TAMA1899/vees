@@ -17,7 +17,7 @@ async def addchannel(client, message):
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "<b>Add me admin first</b>",
+            "<b>Tambahkan saya sebagai admin grup Anda terlebih dahulu</b>",
         )
         return
 
@@ -35,8 +35,8 @@ async def addchannel(client, message):
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>Flood Wait Error\n{user.first_name} can't join your group due to many join requests for userbot! Make sure the user is not banned in the group."
-            "\n\nOr manually add the Assistant bot to your Group and try again.</b>",
+            f"<b>Flood Wait Error\n{user.first_name} tidak dapat bergabung dengan grup Anda karena banyaknya permintaan bergabung untuk userbot! Pastikan pengguna tidak dibanned dalam grup."
+            "\n\nAtau tambahkan Assistant bot secara manual ke Grup Anda dan coba lagi.</b>",
         )
         return
     await message.reply_text(
