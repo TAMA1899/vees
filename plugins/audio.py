@@ -29,7 +29,7 @@ async def stream(_, message: Message):
     keyboard = InlineKeyboardMarkup(
             [
             [
-                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/robotprojectx"),
+                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/pejuangairdrops"),
                     InlineKeyboardButton("ᴏᴡɴᴇʀ", url="https://t.me/ppfffttt"),
             ],
                     [InlineKeyboardButton("❌", callback_data="cls")],
