@@ -19,10 +19,7 @@ ACTV_CALLS = []
 @authorized_users_only
 async def pause(_, message: Message):
     await callsmusic.pytgcalls.pause_stream(message.chat.id)
-    await message.reply_photo(
-        photo="https://telegra.ph/file/dd6814e241bfc4c0255cd.jpg", 
-        caption="**⏸ Music Paused.\n use /resume**",
-    )
+    await message.reply_text("⏸ Music Paused.\n└ Ketik /resume untuk melanjutkan")
 
 
 @Client.on_message(command(["resume", "lanjut"]) & other_filters)
@@ -30,10 +27,7 @@ async def pause(_, message: Message):
 @authorized_users_only
 async def resume(_, message: Message):
     await callsmusic.pytgcalls.resume_stream(message.chat.id)
-    await message.reply_photo(
-        photo="https://telegra.ph/file/d0f2dd5b7519bb5444139.jpg", 
-        caption="**▶️ Music Resumed.\n use /pause**",
-    )
+    await message.reply_text("▶️ Music Resumed.\n└ Ketik /pause untuk menghentikan")
 
 
 @Client.on_message(command(["end", "stop"]) & other_filters)
@@ -46,10 +40,7 @@ async def stop(_, message: Message):
         pass
 
     await callsmusic.pytgcalls.leave_group_call(message.chat.id)
-    await message.reply_photo(
-        photo="https://telegra.ph/file/8d22aa7d53b6acb9a125e.jpg", 
-        caption="❌ **Stopped Streaming\n use /play for new song**",
-    )
+    await message.reply_text("❌ **Stopped Music\n└ Ketik /play untuk memulai lagi")
 
 @Client.on_message(command(["skip", "second", "next", f"next@{BOT_USERNAME}"]) & other_filters)
 @errors
@@ -60,7 +51,7 @@ async def skip(_, message: Message):
     for x in callsmusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) not in ACTV_CALLS:
-        await message.reply_text("❌ **no music is currently playing**")
+        await message.reply_text("❌ **Tidak Ada Music**")
     else:
         queues.task_done(chat_id)
         
@@ -81,7 +72,7 @@ async def skip(_, message: Message):
         qeue.pop(0)
     if not qeue:
         return
-    await message.reply_text("⏭ **You've skipped to the next song.**")
+    await message.reply_text("⏭ ⏩ __Skip ke lagu berikutnya!")
 
 
 
@@ -98,7 +89,4 @@ async def admincache(client, message: Message):
         ),
     )
 
-    await message.reply_photo(
-        photo="https://telegra.ph/file/d881ea9de7620ecc36d08.jpg",
-        caption="**Reloaded\n Admin List updated**",
-    )
+    await message.reply_photo("✅️ __Daftar admin telah diperbarui__")
