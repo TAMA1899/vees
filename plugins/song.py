@@ -1,7 +1,7 @@
 import os
 import requests
 import aiohttp
-import yt_dlp
+import yutup
 
 from pyrogram import Client, filters
 from youtube_search import YoutubeSearch
