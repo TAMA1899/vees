@@ -18,11 +18,8 @@ def time_to_seconds(time):
 
 
 @Client.on_message(filters.command(["song"]))
-def song(_, message):
-    if UPDATES_CHANNEL:
-      fsub = await handle_force_subscribe(_, message)
-      if fsub == 400:
-        return
+def song(clien, message):
+  
     user_id = message.from_user.id
     user_name = message.from_user.first_name
     rpk = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
