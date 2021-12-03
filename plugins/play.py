@@ -267,8 +267,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/robotprojectx"),
-                    InlineKeyboardButton("ᴏᴡɴᴇʀ", url="https://t.me/justthetech"),
+                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/overthinkingid"),
+                    InlineKeyboardButton("ᴏᴡɴᴇʀ", url="https://t.me/ppfffttt"),
                 ],
                 [InlineKeyboardButton(text="❌", callback_data="cls")],
             ]
@@ -314,8 +314,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/robotprojectx"),
-                    InlineKeyboardButton("ᴏᴡɴᴇʀ", url="https://t.me/justthetech"),
+                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/overthinkingid"),
+                    InlineKeyboardButton("ᴏᴡɴᴇʀ", url="https://t.me/ppfffttt"),
                 ],
                 [InlineKeyboardButton(text="❌", callback_data="cls")],
             ]
@@ -393,8 +393,8 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/robotprojectx"),
-                    InlineKeyboardButton("ᴏᴡɴᴇʀ", url="https://t.me/justthetech"),
+                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/overthinkingid"),
+                    InlineKeyboardButton("ᴏᴡɴᴇʀ", url="https://t.me/ppfffttt"),
                 ],
                     [InlineKeyboardButton(text="❌", callback_data="cls")],
                 ]
@@ -491,8 +491,8 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
             [
-                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/robotprojectx"),
-                    InlineKeyboardButton("ᴏᴡɴᴇʀ", url="https://t.me/justthetech"),
+                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/overthinkingid"),
+                    InlineKeyboardButton("ᴏᴡɴᴇʀ", url="https://t.me/ppfffttt"),
             ],
                     [InlineKeyboardButton("❌", callback_data="cls")],
             ]
