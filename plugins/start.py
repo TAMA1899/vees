@@ -54,7 +54,7 @@ Saya Alexa, Saya akan membantumu memutar music di Voice Chat Telegram Groups & C
                 [
                     InlineKeyboardButton(
 
-                        "☕ ᴜᴘᴅᴀᴛᴇ", url=f"https://t.me/overthinkingid"), 
+                        "☕ ᴜᴘᴅᴀᴛᴇ", url=f"https://t.me/pejuangairdrops"), 
 
                     InlineKeyboardButton(
 
